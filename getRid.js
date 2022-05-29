@@ -1,5 +1,5 @@
 //@name "Get rid of Bots"
-//small and simple discord bot to get rid of suspicous accounts
+//small and simple discord bot to get rid of suspicious accounts
 //version 2.0.0
 
 //init client and depen
@@ -22,7 +22,7 @@ function daysDiff(ts){
 async function getRid(guildId)
 {
     let guild = client.guilds.cache.get(guildId);
-    let suspicous = [];
+    let suspicious = [];
     let members = await guild.members.fetch();
     let promises = members.map(async(m) =>{
         let threat = 0;
@@ -49,7 +49,7 @@ async function getRid(guildId)
         {
             //member.kick({reason:"Reason for kick"});
             //member.ban({reason:"Reason for ban"});
-            suspicous.push({threatScore:threat, member : m});
+            suspicious.push({threatScore:threat, member : m});
         }
         return new Promise((res, rej) => {res()});
     });
