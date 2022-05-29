@@ -48,7 +48,7 @@ async function getRid(guildId)
         if(threat >= 2)
         {
             //member.kick({reason:"Reason for kick"});
-            //member.ban({reason:"Reason for kick"});
+            //member.ban({reason:"Reason for ban"});
             suspicous.push({threatScore:threat, member : m});
         }
         return new Promise((res, rej) => {res()});
